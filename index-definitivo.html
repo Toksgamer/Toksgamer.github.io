@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabajoooo</title>
+
+  <!-- Bootstrap CSS local -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+  <!-- ===== ESTILOS DIRECTOS ===== -->
+  <style>
+    /* ================== TESTIMONIOS ================== */
+    .testimonios-section {
+      background-color: #ffffff;
+      padding: 60px 0;
+    }
+
+    .testimonios-section h2 {
+      font-weight: 700;
+      letter-spacing: 2px;
+
+      margin-bottom: 40px;
+    }
+
+    .testimonio-card {
+      background-color: #ffffff;
+      /* cuadro blanco */
+      border-radius: 18px;
+      padding: 24px 26px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      height: 100%;
+    }
+
+    .testimonio-texto {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+
+    .testimonio-estrellas {
+      color: #1f64b5;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    /* Fondo circular avatar */
+    .testimonio-avatar-wrapper {
+      width: 90px;
+      height: 90px;
+      background-color: #e3e3e3;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px auto 6px auto;
+    }
+
+    /* Imagen circular dentro del fondo */
+    .testimonio-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .testimonio-rol {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 2px;
+    }
+
+    .testimonio-nombre {
+      font-weight: 600;
+    }
+
+    /* espacio vertical entre tarjetas */
+    @media (max-width: 991.98px) {
+      .testimonio-card {
+        margin-bottom: 24px;
+      }
+    }
+
+    /* HERO con imagen de fondo */
+    .hero-odontologica {
+      background-color: #cfcfcf;
+      background-image: url("Image/CHICA BANNER.png");
+      background-position: center;
+      background-size: cover;
+      padding: 60px 0;
+    }
+
+    /* texto hero */
+    .hero-text h1 {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .hero-text h3 {
+      color: #ffffff;
+      margin-top: 15px;
+    }
+
+    /* tarjeta del formulario: 5 columnas, fondo blanco al 75% */
+    .hero-form {
+      border-radius: 18px;
+      width: 100%;
+      max-width: none;
+      margin: 0 auto;
+      background-color: rgba(133, 130, 130, 0.75);
+      /* Opacidad solo del fondo */
+      border: none;
+    }
+
+    /* Título del formulario */
+    .hero-form h5 {
+      color: white;
+    }
+
+    /* Labels del formulario */
+    .hero-form .form-label {
+      color: white;
+      font-weight: 500;
+    }
+
+    /* Campos: fondo plomo claro + texto oscuro */
+    .hero-form .form-control {
+      background-color: #f1f1f1;
+      /* plomo claro */
+      color: #333;
+      /* texto oscuro */
+      border: 1px solid #ddd;
+    }
+
+    /* Placeholder gris */
+    .hero-form .form-control::placeholder {
+      color: #666;
+    }
+
+    /* En escritorio */
+    @media (min-width: 992px) {
+      .hero-odontologica .hero-row {
+        min-height: 480px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .hero-text {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+
+    /* Footer */
+    #footer-odontologica {
+      background-color: #0059a8;
+      color: #ffffff;
+    }
+
+    #footer-odontologica a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======================= NAVBAR ======================= -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light">
+    <div class="container">
+
+      <a class="navbar-brand d-flex align-items-center" href="#inicio">
+        <img src="./image/LOGO-ODONTOLOGICA-SUIZA-300x83-removebg-preview.png" height="70" alt="Logo" class="me-2">
+      </a>
+
+      <a href="#reserva" class="btn btn-primary d-none d-md-inline-block d-lg-none ms-auto me-2">
+        Reserva tu cita
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-lg-auto">
+          <li class="nav-item"><a class="nav-link px-3" href="#Inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#Beneficios">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#Especialistas">Especialistas</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#Testimonios">Blog</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#Contacto">Contáctanos</a></li>
+
+          <li class="nav-item ms-lg-3">
+            <a href="#reserva" class="btn btn-primary d-block d-md-none d-lg-inline-block mt-3 mt-lg-0">
+              Reserva tu cita
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero-odontologica" id="inicio">
+    <div class="container">
+      <div class="row hero-row">
+
+        <div class="col-12 col-lg-6 hero-text mb-4 mb-lg-0">
+          <h1>
+            TU SONRISA<br>
+            ES NUESTRO<br>
+            ORGULLO
+          </h1>
+
+        </div>
+
+        <!-- FORMULARIO DE 5 columnas -->
+        <div class="col-12 col-lg-5 col-xl-5 offset-lg-1" id="reserva">
+          <div class="card p-4 hero-form">
+            <h5 class="text-center mb-3 fw-semibold">SONRIE CON NOSOTROS</h5>
+
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Nombres y Apellidos</label>
+                <input type="text" class="form-control" placeholder="Paquito Lozada Mamani">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" placeholder="Correo@gmail.com">
+              </div>
+
+              <div class="mb-3 d-flex gap-2 flex-wrap">
+                <div class="flex-fill">
+                  <label class="form-label">Número de Celular</label>
+                  <input type="text" class="form-control" placeholder="000-000-000">
+                </div>
+
+                <div class="flex-fill">
+                  <label class="form-label">Género</label>
+                  <input type="text" class="form-control" placeholder="Femenino o Masculino">
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Asunto</label>
+                <textarea class="form-control" rows="3" placeholder="Explícanos tu caso..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">
+                Reserva tu cita
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!--Secciones principales de mi landingpage-->
+    <section id="Inicio">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-12 col-md-6">
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center mt-5 mb-4">
+      <h3>TIPOS DE ORTODONCIA</h3>
+    </div>
+
+    </div>
+
+    <section id="Tipos de ortodoncia">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+
+            <div class="container">
+              <div class="row">
+
+                <div class="row g-4">
+                  <!--Contenedor numero 1-->
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card h-100 rounded-4">
+                      <div class="card-body pb-5">
+
+                        <img src="./image/Frame.png" class="mx-auto d-block mb-1 pt-3" alt="">
+                          
+                        <h5 class="card-title text-center pt-2">BRACKETS</h5>
+                        <h5 class="card-title text-center">METÁLICOS</h5>
+
+                        <p class="card-text text-center py-2 pb-3 px-2">
+                          Eficaces, resistentes y recomendados para todo tipo de correcciones.
+                          Son la opción más tradicional y accesible.
+                        </p>
+
+                        <div class="d-flex justify-content-center gap-4 mt-3">
+                          <a href="#" class="btn btn-primary px-4">Reservar</a>
+                          <a href="#" class="card-link my-2 align-self-center">Ver más</a>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                  <!--Contenedor Numero 2-->
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card h-100 rounded-4">
+                      <div class="card-body pb-5">
+
+                        <img src="./image/Frame.png" class="mx-auto d-block mb-1 pt-3" alt="">
+
+                        <h5 class="card-title text-center pt-2">BRACKETS</h5>
+                        <h5 class="card-title text-center">ESTETICOS</h5>
+
+                        <p class="card-text text-center py-2 pb-3 px-2">
+                          Discretos y elegantes; se mimetizan con el color del diente sin perder eficiencia en el
+                          tratamiento y el proceso .
+                        </p>
+
+                        <div class="d-flex justify-content-center gap-4 mt-3">
+                          <a href="#" class="btn btn-primary px-4">Reservar</a>
+                          <a href="#" class="card-link my-2 align-self-center">Ver más</a>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                  <!--Contenedor Numero 3-->
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card h-100 rounded-4">
+                      <div class="card-body pb-4">
+
+                        <img src="./image/Frame.png" class="mx-auto d-block mb-1 pt-3" alt="">
+
+                        <h5 class="card-title text-center pt-2">BRACKETS</h5>
+                        <h5 class="card-title text-center">AUTOLIGADOS</h5>
+
+                        <p class="card-text text-center py-2 pb-3 px-2">
+                          Utilizan un sistema más moderno sin ligas, lo que reduce la fricción, mejora la comodidad y
+                          acelera ciertos movimientos.
+                        </p>
+
+                        <div class="d-flex justify-content-center gap-4 mt-3">
+                          <a href="#" class="btn btn-primary px-4">Reservar</a>
+                          <a href="#" class="card-link my-2 align-self-center">Ver más</a>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                  <!--Contenedor Numero 4-->
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card h-100 rounded-4">
+                      <div class="card-body pb-5 d-flex flex-column">
+
+                        <img src="./image/Frame.png" class="mx-auto d-block mb-1 pt-3" alt="">
+
+                        <h5 class="card-title text-center pt-2">ALINEADOS</h5>
+                        <h5 class="card-title text-center">TRANSPARENTES</h5>
+
+                        <p class="card-text text-center py-2 pb-3 px-2">
+                          Placas removibles, cómodas y casi invisibles. Permiten comer y cepillarse con total libertad.
+                        </p>
+
+
+                        <div class="d-flex justify-content-center gap-4 mt-auto">
+                          <a href="#" class="btn btn-primary px-4">Reservar</a>
+                          <a href="#" class="card-link my-2 align-self-center">Ver más</a>
+                        </div>
+
+                      </div>
+                    </div>
+
+
+
+
+
+
+                  </div>
+
+                </div>
+
+
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <div style="padding-bottom: 60px;"></div>
+
+
+
+
+
+    <section id="Beneficios">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+
+            <div style="max-width:1200px; margin:auto; padding:20px; font-family:Arial, sans-serif;  margin-top: 50px;">
+
+              <!-- CONTENEDOR FLEX (RESPONSIVE) -->
+              <div style="
+        display:flex; 
+        flex-wrap:wrap; 
+        align-items:center; 
+        justify-content:center;
+        gap:30px;
+    ">
+
+                <!-- IMAGEN -->
+                <div style="position:relative; flex:1 1 350px; min-width:280px; max-width:450px;">
+
+                  <img src="./image/23 AÑOS ODONTOLOGIA.png" alt="Dentista"
+                    style="width:100%; border-radius:20px; display:block;">
+                </div>
+                <!-- IMAGEN -->
+                <!--TEXTOS-->
+                <div style="width:50%; min-width:280px;">
+
+                  <div style="
+        
+         
+
+        margin-bottom:60px;
+        text-align:center;    
+    ">
+                    <h3 style="font-weight: bold;">BENEFICIOS</h3>
+                  </div>
+
+                  <ul style="padding-left:0; list-style:none; font-size:18px; line-height:28px;">
+                    <li style="margin-bottom:12px;">✔ Mejora la estética de tu sonrisa, dandote una imagen más
+                      atractiva.</li>
+                    <li style="margin-bottom:12px;">✔ Facilita la limpieza dental, reduciendo placa, caries y problemas
+                      en las encías.</li>
+                    <li style="margin-bottom:12px;">✔ Corrige la mordida, evitando desgaste prematuro de los dientes y
+                      dolores.</li>
+                    <li style="margin-bottom:12px;">✔ Optimiza la función oral, mejorando la masticación y la
+                      pronunciación.</li>
+                    <li style="margin-bottom:12px;">✔ Aumenta tu confianza y bienestar emocional, impactando
+                      positivamente en tu vida personal y profesional.</li>
+                  </ul>
+
+                </div>
+                <!--TEXTOS-->
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <div style="padding-bottom: 40px;"></div>
+
+
+
+
+    <section id="Especialistas">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+
+            <div class="container">
+              <div class="row">
+
+                <div class="row g-4">
+                  <div class="text-center mt-5 mb-3">
+
+                    <h3>ESPECIALISTAS</h3>
+                  </div>
+                  <!--Contenedor especialista numero 1-->
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card h-90 rounded-5">
+                      <div class="card-body pb-3">
+
+                        <img src="./image/especialista 1.png" class="mx-auto d-block mb-1 pt-3 pb-3" alt="">
+
+                        <h5 class="card-title text-center pt-2 pb-1">
+                          Héctor Salazar Quispe
+                        </h5>
+
+                        <div class="d-flex justify-content-center gap-4 mt-3">
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!--Contenedor especialista numero 2-->
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card h-90 rounded-5">
+                      <div class="card-body pb-3">
+
+
+
+                        <img src="./image/especialista 1.png" class="mx-auto d-block mb-1 pt-3 pb-3" alt="">
+
+                        <h5 class="card-title text-center pt-2 pb-1">
+                          Mariela Torres Cárdenas
+                        </h5>
+
+                        <div class="d-flex justify-content-center gap-4 mt-3">
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!--Contenedor especialista numero 3-->
+
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card h-90 rounded-5">
+                      <div class="card-body pb-3">
+
+                        <img src="./image/especialista 1.png" class="mx-auto d-block mb-1 pt-3 pb-3" alt="">
+
+                        <h5 class="card-title text-center pt-2 pb-1">
+                          Jimena Aguilar Huamán
+                        </h5>
+
+                        <div class="d-flex justify-content-center gap-4 mt-3">
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!--Contenedor especialista numero 4-->
+                  <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card h-90 rounded-5">
+                      <div class="card-body pb-3">
+
+                        <img src="./image/especialista 1.png" class="mx-auto d-block mb-1 pt-3 pb-3" alt="">
+
+                        <h5 class="card-title text-center pt-2 pb-1">
+                          Rocío Valdivia Paredes
+                        </h5>
+
+                        <div class="d-flex justify-content-center gap-4 mt-3">
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding-bottom: 50px;"></div>
+
+
+
+
+
+
+
+      </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- ======================= TESTIMONIOS ======================= -->
+    <section id="Testimonios" class="testimonios-section">
+      <div class="container">
+        <!-- TÍTULO -->
+        <div class="row mb-4">
+          <div class="col-12 text-center">
+            <h2>TESTIMONIOS</h2>
+          </div>
+        </div>
+
+        <!--CUADRO-->
+        <div class="row g-4">
+          <!-- TESTIMONIO 1 -->
+          <div class="col-12 col-md-4 d-flex">
+            <div class="testimonio-card flex-fill">
+              <p class="testimonio-texto">
+                Decidí realizarme un tratamiento de ortodoncia en Odontológica Suiza y los
+                resultados fueron mejor de lo que me esperaba. El equipo fue muy profesional
+                y me sentí apoyada en todo momento.
+              </p>
+
+              <div class="testimonio-estrellas mb-3">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+              </div>
+
+              <!-- Avatar con fondo plomo -->
+              <div class="testimonio-avatar-wrapper">
+                <img src="./image/PERFIL TESTIMONIO 1.png" alt="Bianca Claire" class="testimonio-avatar">
+              </div>
+
+              <p class="testimonio-rol">Clientes Leales</p>
+              <p class="testimonio-nombre">Bianca Claire</p>
+            </div>
+          </div>
+
+          <!-- TESTIMONIO 2 -->
+          <div class="col-12 col-md-4 d-flex">
+            <div class="testimonio-card flex-fill">
+              <p class="testimonio-texto">
+                Me hice un blanqueamiento dental en Odontológica Suiza y el cambio
+                ha sido muy positivo. Mi sonrisa realmente está más blanca. El trato
+                fue excelente, muy recomendados.
+              </p>
+
+              <div class="testimonio-estrellas mb-3">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+              </div>
+
+              <!-- Avatar con fondo plomo -->
+              <div class="testimonio-avatar-wrapper">
+                <img src="image/PERFIL TESTIMONIO 1.png" alt="Eros Quispe" class="testimonio-avatar">
+              </div>
+
+              <p class="testimonio-rol">Clientes Leales</p>
+              <p class="testimonio-nombre">Eros Quispe</p>
+            </div>
+          </div>
+
+          <!-- TESTIMONIO 3 -->
+          <div class="col-12 col-md-4 d-flex">
+            <div class="testimonio-card flex-fill">
+              <p class="testimonio-texto">
+                En Odontológica Suiza me brindaron una atención increíble, el proceso fue
+                más rápido y cómodo de lo que imaginaba. ¡Estoy muy contento con los resultados!
+              </p>
+
+              <div class="testimonio-estrellas mb-3">
+                <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+              </div>
+
+              <!-- Avatar con fondo plomo -->
+              <div class="testimonio-avatar-wrapper">
+                <img src="./image/PERFIL TESTIMONIO 1.png" alt="Enrique Chuquimango" class="testimonio-avatar">
+              </div>
+
+              <p class="testimonio-rol">Clientes Leales</p>
+              <p class="testimonio-nombre">Enrique Chuquimango</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer-odontologica">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-12 col-md-4 mb-4">
+          <img src="./Image/Logo_light-editado.png" height="50" alt="">
+          <p class="mt-3">¡Queremos verte bien!</p>
+          <p>Sobre nosotros</p>
+          <p>La Libertad, Trujillo</p>
+          <p>info@odontologicasuiza.com</p>
+          <p>(+51) 966 260 724</p>
+        </div>
+
+        <div class="col-12 col-md-4 mb-4">
+          <h6>Sedes</h6>
+          <p>Sede San Andrés Calle San Andrés #219</p>
+          <p>Sede Av. Larco Av. Larco #1350</p>
+          <p>Sede Av. España Av. España #2578</p>
+          <p>Sede Las Quintanas Av. Manuel Vera Enríquez #523</p>
+          <p>Sede La Noria Av. César Vallejo #1218</p>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <h6>Políticas</h6>
+          <p>Política de Privacidad</p>
+          <p>Términos y Condiciones</p>
+          <p>Política de Cookies</p>
+          <p>Consentimiento Informado</p>
+
+          <h6 class="mt-3">Redes</h6>
+          <p>Facebook · Instagram · TikTok · WhatsApp</p>
+        </div>
+      </div>
+
+      <hr class="border-light">
+      <p class="text-center mb-0">
+        © 2025 Odontológica Suiza. Todos los derechos reservados
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

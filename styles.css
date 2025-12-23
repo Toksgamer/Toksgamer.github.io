@@ -1,0 +1,253 @@
+/* ================== CONTAINER QUERIES ================== */
+.cq{
+  container-type: inline-size;
+}
+
+/* ================== NAVBAR (STICKY + BOLD) ================== */
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  background: #fff;
+  margin: 0;
+}
+
+.navbar .nav-link{
+  font-weight: 700;
+}
+
+/* ================== TÍTULOS (MISMO ESTILO EN TODAS LAS SECCIONES) ================== */
+.titulo-seccion{
+  font-weight: 600;         /* ✅ menos grueso */
+  letter-spacing: 1.8px;    /* ✅ mantiene estilo sin verse pesado */
+  text-transform: uppercase;
+  margin: 0 0 30px 0;
+}
+
+/* ================== HERO ================== */
+.hero-odontologica{
+  background-color: #cfcfcf;
+  background-image: url("Image/CHICA BANNER.png");
+  background-position: center;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+.hero-text h1{
+  color: #fff;
+}
+
+.hero-text{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero-text-figma{
+  text-align: left !important;
+}
+
+.hero-title{
+  font-size: clamp(42px, 4vw, 64px);
+  line-height: 1.05;
+  font-weight: 700;         /* ✅ menos grueso que 800 */
+  margin: 0;
+  transform: translateY(30px);
+}
+
+/* Tarjeta formulario */
+.hero-form{
+  border-radius: 18px;
+  width: 100%;
+  background-color: rgba(133, 130, 130, 0.75);
+  border: none;
+}
+
+.hero-form h5{ color: #fff; }
+.hero-form .form-label{ color:#fff; font-weight:500; }
+
+.hero-form .form-control{
+  background-color: #f1f1f1;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.hero-form .form-control::placeholder{ color:#666; }
+
+@container (min-width: 992px){
+  .hero-odontologica .hero-row{
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+  }
+  .hero-text{
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+
+/* ================== SECCIONES CELESTES (TIPOS + ESPECIALISTAS) ================== */
+.seccion-fondo{
+  background-color: #E7F2F9;
+  padding: 60px 0;
+}
+
+/* ================== ESPECIALISTAS (ALTURA IGUAL) ================== */
+.especialista-card{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.especialista-card .card-body{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+
+.especialista-card img{
+  width: 100%;
+  max-width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.especialista-card h5{
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+/* ================== TESTIMONIOS ================== */
+.testimonios-section{
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.testimonio-card{
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 24px 26px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+.testimonio-fondo{
+  background-color: #E7F2F9;
+}
+
+.testimonio-texto{
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.testimonio-estrellas{
+  color: #1f64b5;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.testimonio-avatar-wrapper{
+  width: 90px;
+  height: 90px;
+  background-color: #e3e3e3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto 6px auto;
+}
+
+.testimonio-avatar{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonio-rol{
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.testimonio-nombre{
+  font-weight: 600;
+}
+
+@container (max-width: 991px){
+  .testimonio-card{ margin-bottom: 24px; }
+}
+
+/* ================== FOOTER ================== */
+#footer-odontologica{
+  background-color: #0059a8;
+  color: #fff;
+}
+
+#footer-odontologica a{
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ================== BENEFICIOS (SIN INLINE) ================== */
+.beneficios-section{
+  padding: 50px 0;
+}
+
+.beneficios-wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.beneficios-flex{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.beneficios-img{
+  position: relative;
+  flex: 1 1 350px;
+  min-width: 280px;
+  max-width: 450px;
+}
+
+.beneficios-photo{
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+.beneficios-content{
+  width: 50%;
+  min-width: 280px;
+}
+
+.beneficios-title{
+  margin-bottom: 30px;     /* antes 60px */
+  text-align: center;
+}
+
+.beneficios-list{
+  padding-left: 0;
+  list-style: none;
+  font-size: 16px;         /* antes 18px */
+  line-height: 1.7;        /* más parecido a las otras secciones */
+}
+
+.beneficios-list li{
+  margin-bottom: 12px;
+}
+
+.navbar-afacad .nav-link,
+.navbar-afacad .navbar-brand {
+  font-family: "Afacad", sans-serif;
+  font-size: 20px;
+  
+}
